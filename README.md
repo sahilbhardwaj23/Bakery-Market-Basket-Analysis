@@ -10,24 +10,7 @@ This project implements **Market Basket Analysis** using transaction data to unc
 
 ---
 
-### Assocation Rules Description
-The dataset contains transaction records with the following columns:
-- **Base Item**: Primary product in a transaction.
-- **Add Item**: Associated product in the same transaction.
-- **Confidence**: Probability that the Add Item is purchased when the Base Item is bought.
-- **Lift**: Strength of the association between Base and Add Item.
 
-**Sample Dataset:**
-
-| **Base Item**            | **Add Item**              | **Confidence** | **Lift**   |
-|---------------------------|---------------------------|----------------|------------|
-| Almond Twist             | Apple Pie                | 0.497          | 4.934      |
-| Apple Pie                | Almond Twist             | 0.496          | 4.934      |
-| Almond Twist             | Coffee Eclair            | 0.511          | 3.603      |
-| Coffee Eclair            | Almond Twist             | 0.362          | 3.603      |
-| Raspberry Cookie         | Raspberry Lemonade       | 0.430          | 4.796      |
-
----
 
 ### Tools and Technologies
 - **Azure Cloud**: For data storage, processing, and analytics.
