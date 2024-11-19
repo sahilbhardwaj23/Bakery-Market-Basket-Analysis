@@ -1,0 +1,17 @@
+[
+    {
+        "p_rel_url":"sahilbhardwaj23/Bakery-Market-Basket-Analysis/refs/heads/master/5000i.csv",
+        "p_sink_folder":"Transactions",
+        "p_file_name":"5000i.csv"
+    },
+    {
+        "p_rel_url":"sahilbhardwaj23/Bakery-Market-Basket-Analysis/refs/heads/master/20000i.csv",
+        "p_sink_folder":"Transactions",
+        "p_file_name":"20000i.csv"
+    },
+    {
+        "p_rel_url":"sahilbhardwaj23/Bakery-Market-Basket-Analysis/refs/heads/master/75000i.csv",
+        "p_sink_folder":"Transactions",
+        "p_file_name":"75000i.csv"
+    }
+]
