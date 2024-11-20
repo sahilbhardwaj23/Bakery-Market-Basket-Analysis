@@ -1,45 +1,62 @@
-## Market Basket Analysis Using Azure Cloud
+# Market Basket Analysis
 
-### Overview
-This project implements **Market Basket Analysis** using transaction data to uncover associations between frequently purchased items. It utilizes **association rule mining** to derive insights for cross-selling, up-selling, and promotional strategies. The analysis was performed on Azure Cloud for scalability and efficiency.
+## Overview
+This project focuses on **Market Basket Analysis (MBA)**, a data mining technique used to uncover associations between products frequently purchased together by customers. The goal is to identify frequent itemsets (sets of products that appear together often) and generate association rules that can help improve product recommendations, inventory management, and targeted marketing strategies.
 
-### Key Features
-- **Association Rules**: Extracts item relationships based on support, confidence, and lift metrics.
-- **Azure Integration**: Data preprocessing and analytics performed on Azure for large-scale transaction datasets.
-- **Actionable Insights**: Highlights frequent item pairs and co-purchase trends.
+The project enhances the classic Apriori algorithm with optimizations such as parallel computing, rule pruning, and customer segmentation through clustering. The results are visualized and interacted with via a **Streamlit interface** for easier insights.
 
----
-
-
-
-### Tools and Technologies
-- **Azure Cloud**: For data storage, processing, and analytics.
-- **Python**: Data preprocessing and association rule mining.
-- **Libraries**: 
-  - `pandas` for data manipulation.
-  - `apyori` for association rule mining.
-  - `matplotlib` and `seaborn` for visualizations.
-- **Jupyter Notebooks**: Interactive environment for experimentation.
-
----
-
-### Key Results
-- **Strong Item Associations**: 
-  - *Almond Twist → Coffee Eclair*: Confidence = 51%, Lift = 3.6.
-  - *Raspberry Cookie → Raspberry Lemonade*: Confidence = 43%, Lift = 4.8.
-- **Cross-Sell Opportunities**: Frequent pairs like *Walnut Cookie → Vanilla Frappuccino* provide opportunities for combo promotions.
-- **Promotional Insights**: High-lift pairs indicate profitable associations for targeted discounts.
-
----
+## Key Features
+- **Market Basket Analysis** using the Apriori algorithm to uncover frequent itemsets and generate association rules.
+- **Optimizations** like parallel processing and rule pruning to handle large datasets efficiently.
+- **Customer Segmentation** using K-means clustering to provide personalized insights.
+- **Azure Cloud Integration** for scalable data storage and processing.
+- **Streamlit Dashboard** for visualizing and interacting with the results.
 
 
 
 
+## Data Collection & Preprocessing
 
-### Insights and Recommendations
-1. Focus on cross-selling *high-lift* pairs.
-2. Develop targeted promotions for frequently purchased combinations.
-3. Use Azure's scalable infrastructure for real-time analytics on larger datasets.
+The dataset consists of transaction data that includes:
+- **Transaction IDs**: Unique identifiers for each transaction.
+- **Product IDs/Names**: The products bought in each transaction.
+- **Quantity Purchased**: Number of units of each product.
 
----
+
+
+### Preprocessing Steps:
+1. **Data Cleaning**: Handling missing values and removing duplicates.
+2. **Data Transformation**: Conversion of transaction data into a binary matrix format for MBA analysis.
+
+## Market Basket Analysis
+
+The **Apriori algorithm** is used to identify frequent itemsets and generate association rules. Key metrics include:
+- **Support**: The proportion of transactions containing an itemset.
+- **Confidence**: The likelihood of purchasing one item given that another is purchased.
+- **Lift**: The ratio of observed support to expected support if the items were independent.
+
+### Optimizations:
+- **Parallel Processing**: Using Azure Databricks for distributed computing to speed up analysis.
+- **Rule Pruning**: Filtering out low-confidence and low-lift rules to retain only meaningful insights.
+
+## Azure Cloud Integration
+
+Azure was used to:
+- Store datasets in **BlobStorage** for easy access and secure management.
+- Run **Apriori Algorithm** on **Azure Databricks** to utilize parallel computing.
+- Track experiments and optimize models using **Azure Machine Learning**.
+
+## Customer Segmentation with Clustering
+
+To enhance the quality of the analysis, **K-means clustering** was applied to segment customers based on their purchasing behavior. This allowed for more personalized recommendations.
+
+### Clustering Process:
+1. **Feature Selection**: Choosing relevant features like product categories, quantities, and purchase frequency.
+2. **K-means Algorithm**: Grouping customers with similar purchasing patterns.
+3. **Apriori on Clusters**: Applying the Apriori algorithm separately to each cluster for more targeted insights.
+
+
+- **Visualize Association Rules**: Display rules with metrics such as support, confidence, and lift.
+- **Explore Clustering Insights**: View customer segments and their purchasing behaviors.
+- **Real-time Exploration**: Adjust parameters like minimum support and confidence to refine the results.
 
