@@ -1,4 +1,5 @@
 # Market Basket Analysis
+![](Snapshot.png)
 
 ## Overview
 This project focuses on **Market Basket Analysis (MBA)**, a data mining technique used to uncover associations between products frequently purchased together by customers. The goal is to identify frequent itemsets (sets of products that appear together often) and generate association rules that can help improve product recommendations, inventory management, and targeted marketing strategies.
